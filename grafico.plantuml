@@ -1,0 +1,86 @@
+@startuml ejericioSuledoPepe
+
+title Sueldo de Pepe
+
+abstract class CalcularSueldo{
+
+    + abstract calcular() : Float
+   
+}
+
+class SueldoBasico{
+
+    + calcular(float Neto, float BP, float BR) : Float
+}
+
+class SueldoAvanzado {
+
+    + calcular() : Float
+}
+
+class Persona{
+
+    - string nombre
+    - string categoria
+    - int faltas
+
+    + getNombre() : String
+    + setNombre(String) : void
+
+    + getCategoria() : String
+    + setNombre(String) : void
+
+    + getFaltas() : int 
+    + setFaltas(int) : void
+
+}
+
+
+class BP {
+
+    + bonoPresentismo(int) : Float  
+
+
+}
+
+abstract class BR{
+
+    abstract sobreNeto( float neto ) : float
+    abstract fijo () : float
+    abstract null () : Null 
+
+    
+}
+
+class bonoFijo{
+
+    - valor
+
+    + getValor() : float
+    + setValor () : void
+}
+
+class bonoSobreNeto{
+
+    + sobreNeto() : float
+}
+
+class bonoCero{
+
+    + nulo() : 0.0
+}
+
+
+CalcularSueldo <|-- SueldoBasico
+CalcularSueldo <|-- SueldoAvanzado
+BR <|-- bonoFijo
+BR <|-- bonoSobreNeto
+BR <|-- bonoCero
+
+
+
+
+
+
+@enduml
+
