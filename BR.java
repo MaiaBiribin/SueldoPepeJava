@@ -4,13 +4,13 @@ public class BR extends Persona{
 
     private int sueldoFijo;
 
-    private int getSueldoFijo(){
+    public int getSueldoFijo(){
 
         return 80;
     }
     private int sueldoNulo = 0;
 
-    public double sobreNeto( Persona sueldoNeto){
+    public double sobreNeto(Persona sueldoNeto){
 
         return sueldoNeto.getSueldoNeto() * 0.1;
     }

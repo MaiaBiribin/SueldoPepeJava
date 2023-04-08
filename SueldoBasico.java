@@ -2,12 +2,8 @@ package SuledoPepe;
 
 public class SueldoBasico extends CalcularSueldo{
 
-    public float calcular(Persona empleado){
+    public double calcular(Persona empleado){
 
-        float resultado;
-
-        resultado = empleado.getSueldoNeto() + empleado.bonoResultado + BR;
-
-        return resultado;
+        return empleado.getSueldoNeto();
     }
 }

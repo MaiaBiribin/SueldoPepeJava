@@ -1,7 +1,6 @@
 package SuledoPepe;
 
-public class Categoria {
-
+public class Categoria implements CalcularSueldoNeto{
    private String nombreCategoria;
 
    public String getNombreCategoria(){
@@ -14,4 +13,16 @@ public class Categoria {
       this.nombreCategoria = nombreCategoria;
    }
 
+   public float netoSegunCategoria(String nombreCategoria){
+
+      if(nombreCategoria == "cadete"){
+
+         return 1500;
+      }
+      else if(nombreCategoria == "gerente"){
+         return 1000;
+      }
+
+      return -1;
+   }
 }
